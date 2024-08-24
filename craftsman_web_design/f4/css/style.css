@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+*{
+    outline: 1px solid red;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body, ul{
+    margin: 0;
+}
+
+body{
+    color:#333;
+    background: #fff;
+    font:15px Arial, 굴림, sans-serif;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+a{
+    color:#333;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    height: 100px;
+    width: 1340px;
+    margin: 0 auto;
+    background: lime;
+}
+
+.logo{
+    width: 190px;
+    height: 44px;
+}
+
+nav{
+    align-self:flex-end;
+}
+
+.main{
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.main>li>a{
+    display:inline-block;
+    padding:16px 24px;
+}
+
+.main>li>a:hover{
+    background: #e31a40;
+}
+
+.sub{
+    display: none;
+    font-size: 1.4rem;
+    font-weight: normal;
+    /* height: 0; */
+}
+
+#slide{
+    /* width: 100%; */
+    height: 350px;
+    overflow: hidden;
+}
+
+#slide ul{
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 9s infinite;
+    position: relative;
+}
+
+@keyframes slide{
+    0%{
+        left:0%;
+    }
+    10%{
+        left:-100%;
+    }
+    33%{
+        left:-100%;
+    }
+    43%{
+        left:-200%;
+    }
+    66%{
+        left:-200%;
+    }
+    76%{
+        left:-300%;
+    }
+    99.99%{
+        left:-300%;
+    }
+    100%{
+        left:0;
+    }
+}
+.container{
+    position: relative;
+    top: -100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+
+#link{
+    height: 100px;
+    background: red;
+}
+
+#link ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#link li{
+    width: 120px;
+    height: 60px;
+}
+
+#link li img{
+    width: 60px;
+    height: 60px;
+}
+
+#banner{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    padding: 0 70px;
+}
+
+#banner img{
+    width: 100px;
+    height: 60px;
+}
+
+#banner .txt{
+    margin: 0 160px 0 24px;
+}
+#board{
+    display: flex;
+    height: 300px;
+}
+
+#board>div {
+    width: 600px;
+    height: 260px;
+}
+
+footer{
+    height: 100px;
+}

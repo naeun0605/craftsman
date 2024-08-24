@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+body, ul, p{
+    margin: 0;
+    padding:0;
+    font-size: 16px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#979494;
+}
+
+img{
+    vertical-align: top;
+}
+.wrap{
+    width: 100%;
+}
+
+.inner{
+    width: 1200px;
+    margin:0 auto;
+}
+
+header{
+    position: relative;
+}
+
+header .container{
+    background:skyblue;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:100px;
+    padding:0 24px;
+}
+
+nav{
+    align-self:flex-end;
+}
+
+.main{
+    display: flex;
+}
+
+.main>li{
+    width: 160px;
+    height: 40px;
+    padding:8px;
+    /* font-size: 20px; */
+    font-weight: bold;
+    text-align: center;
+    border:1px solid red;
+}
+
+.main>li>a{
+    color:#fff;
+}
+
+.main>li:hover{
+    background: #fff;
+}
+
+.main>li:hover a{
+    color:#000;
+}
+
+
+
+.sub{
+    position: relative;
+    z-index: 99;
+    opacity: 0; 
+    border:3px dotted lime;
+}
+
+.sub li{
+    padding:8px 0;
+}
+
+.main>li:hover .sub {
+    z-index: 101;
+    opacity: 1;
+    background: #fff;
+}
+
+.sub li:hover a{
+    border-bottom:5px solid skyblue;
+}
+
+#slide{
+    /* width: 100%; */
+    height: 300px;
+    overflow: hidden;  
+}
+
+#slide ul{
+    display: flex;
+    position: relative;
+    animation:slide 6s infinite; 
+    width: 400%;
+}
+
+@keyframes slide{
+    0%{
+        left:0;
+    }
+    10%{
+        left:-100%;
+    }
+    33%{  
+        left:-100%;
+    }
+    43%{
+        left:-200%;
+    }
+    66%{
+        left:-200%;
+    }
+    76%{
+        left:-300%;
+    }
+    99.99%{
+        left:-300%;
+    }
+    100%{
+        left:0;
+    }
+}
+
+.contents{
+    height: 200px;
+    display: flex;
+}
+
+#notice{
+    width: 400px;
+}
+
+#gallery{
+    width: 400px;
+}
+
+#gallery ul{
+    display: flex;
+}
+
+#banner{
+    width: 400px;
+}
+
+
+.bottom{
+    height: 100px;
+    display: flex;
+    background: skyblue;
+}
+
+.left{
+    position: absolute;
+    background: yellow;
+}
