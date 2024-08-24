@@ -69,6 +69,7 @@ nav{
     background: #fff;
 }
 
+
 .main>li:hover a{
     color:#000;
 }
@@ -85,11 +86,14 @@ nav{
     padding:8px 0;
 }
 
-.main>li:hover .sub {
+.main:hover .sub {
     z-index: 101;
     opacity: 1;
+    height: 150px;
     background: #fff;
 }
+
+
 
 .sub li:hover a{
     border-bottom:5px solid skyblue;
