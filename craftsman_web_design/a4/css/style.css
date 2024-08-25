@@ -113,44 +113,48 @@ nav{
 }
 
 #slide{
-    /* width: 100%; */
-    height: 300px;
-    overflow: hidden;  
-}
-
-#slide ul{
-    display: flex;
     position: relative;
-    animation:slide 6s infinite; 
-    width: 400%;
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
 }
 
-@keyframes slide{
+#slide li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 6s infinite;
+}
+
+@keyframes fade{
     0%{
-        left:0;
+        opacity: 0;
     }
-    10%{
-        left:-100%;
+    25%{
+        opacity: 1;
     }
-    33%{  
-        left:-100%;
+    50%{
+        opacity: 1;
     }
-    43%{
-        left:-200%;
-    }
-    66%{
-        left:-200%;
-    }
-    76%{
-        left:-300%;
-    }
-    99.99%{
-        left:-300%;
+    75%{
+        opacity: 0;
     }
     100%{
-        left:0;
+        opacity: 0;
     }
 }
+
+#slide li:nth-child(1){
+    animation-delay: 0s;
+}
+#slide li:nth-child(2){
+    animation-delay: 2s;
+}
+#slide li:nth-child(3){
+    animation-delay: 4s;
+}
+
 
 .contents{
     height: 200px;

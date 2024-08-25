@@ -39,7 +39,8 @@ nav{
     font-weight: bold;
     line-height: 2;
     text-align: center;
-    padding:20px;
+    /* padding:20px; */
+    /* margin:10px; */
 
 }
 
@@ -47,11 +48,6 @@ nav{
     border:5px solid blue;
 }
 
-.sub{
-    font-size: 15px;
-    font-weight: normal;
-
-}
 
 .main>li:hover{
     background: blue;
@@ -61,38 +57,44 @@ nav{
     color:#fff;
 }
 
-
-
+.main>li{
+    position: relative;
+}
 
 .sub{
-    height: 200px;
+    font-size: 15px;
+    font-weight: normal;
+    height: 300px;
     width:200px;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    left:180px;
-    top:50px;
+    left:600px;
+    top:-30px;
     align-items: center;
-}
-
-.sub li{
     background: blue;
+    z-index: 10;
 }
-
 
 
 .main>li:hover .sub{
     opacity: 1;
     visibility: visible;
+
 }
 
-.sub>li:hover a{
-    background: blue;
-}
-
-.sub>li:hover a{
+.main>li:hover .sub li a{
     color:#fff;
 }
+
+.sub>li:hover{
+    background: rgb(1, 1, 107);
+}
+
+.main li:hover .sub{
+    left: 160px;
+}
+
 .right{
     width: 800px;
     height: 650px;

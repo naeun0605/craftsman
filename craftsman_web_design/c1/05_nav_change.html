@@ -50,14 +50,6 @@
             /* 1depth에 주면 글자속성은 상속받아서 2depth에도 적용됨 */
         }
 
-        .sub {
-            background: #777;
-            overflow: hidden;
-            visibility: hidden;
-            opacity: 0;
-            line-height: 2;
-        }
-
         .main>li:hover .sub {
             visibility: visible;
             opacity: 1;
@@ -77,6 +69,11 @@
             left: 100px;
             width: 200px;
             height: 300px;
+            background: #777;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            line-height: 2;
         }
 
         .main li:hover .sub {

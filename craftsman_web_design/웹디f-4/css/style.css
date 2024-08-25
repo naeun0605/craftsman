@@ -1,0 +1,352 @@
+@charset "utf-8";
+
+/* 공통 */
+* {
+    box-sizing: border-box;
+}
+
+body,
+ul {
+    margin: 0;
+}
+
+body {
+    color: #333;
+    background: #fff;
+    /* font: [굵기] [기울임] 크기 글꼴; */
+    font: 15px Arial, 굴림, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* A영역 */
+header {
+    z-index: 9999;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+    /* width: 100px; */
+    margin: 0 auto;
+}
+
+/* 로고 */
+.logo {
+    width: 190px;
+    height: 44px;
+}
+
+/* 내비게이션 */
+nav {
+    align-self: flex-end;
+}
+
+.gnb {
+    margin-top: 20px;
+    background: #afafaf8a;
+}
+
+/* 1depth */
+.main {
+    display: flex;
+}
+
+.main > li {
+    width: 160px;
+    height: 30px;
+    /* 모든 메뉴 가로 가운데 배치 */
+    text-align: center;
+    /* 메인메뉴 텍스트 세로 가운데 배치: line-height크기를 height와 같은 크기로 지정 */
+    line-height: 30px;
+}
+
+.main > li:hover {
+    background: #bd4646;
+}
+
+/* 2depth */
+.sub {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    /* 숫자가 작을 수록 빠르다. */
+    transition: 0.3s;
+    line-height: 2;
+}
+
+/* 선택자가 변경됨: >li 제거 */
+/* 유형1: .main>li:hover .sub { */
+.main:hover .sub {
+    height: 150px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    background: #c9a7a7;
+}
+
+/* 유형3의 추가 코드 */
+
+.gnb {
+    position: relative;
+}
+
+.main {
+    border: 1px solid;
+    height: 30px;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: 0.3s;
+    background: rgba(240, 119, 119, 0.5);
+}
+
+.main:hover::before {
+    height: 150px;
+    opacity: 1;
+}
+
+/* B영역 */
+#slide {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+#slide ul {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 9s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    10% {
+        left: -100%;
+    }
+
+    33% {
+        left: -100%;
+    }
+
+    43% {
+        left: -200%;
+    }
+
+    66% {
+        left: -200%;
+    }
+
+    76% {
+        left: -300%;
+    }
+
+    99.99% {
+        left: -300%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    /* 왼쪽 상단으로 배치 */
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 0, 0.178);
+    width: 100%;
+    height: 100%;
+}
+
+#modal .popup {
+    position: absolute;
+    /* 가운데에 팝업 뜨도록 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+    height: 400px;
+    background: lightblue;
+    padding: 20px;
+}
+
+#modal .popup button {
+    position: absolute;
+    /* 아래에서 20, 오른쪽에서 20만큼 떨어뜨리기 */
+    bottom: 20px;
+    right: 20px;
+}
+
+/* C와 D영역 공통 */
+.container {
+    position: relative;
+    top: -100px;
+    width: 1340px;
+    margin: 0 auto;
+}
+
+/* C영역 */
+#link {
+    height: 100px;
+    background: #e31a40;
+}
+
+#link ul {
+    display: flex;
+    /* 주축(가로) 배치 */
+    justify-content: space-evenly;
+    /* 교차축(세로) 배치 */
+    align-items: center;
+    height: 100%;
+}
+
+#link li {
+    width: 120px;
+    height: 60px;
+}
+
+#link li img {
+    width: 60px;
+    height: 60px;
+    /* 인라인 요소의 수직 배치 */
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    padding: 0 70px;
+    border-bottom: 1px solid black;
+}
+
+#banner img {
+    width: 100px;
+    height: 80px;
+}
+
+#banner .txt {
+    /* 상우하좌 */
+    margin: 0 160px 0 24px;
+}
+
+#board {
+    display: flex;
+    height: 300px;
+    padding: 20px 40px;
+}
+
+#board > div {
+    width: 600px;
+    height: 260px;
+}
+
+/* 공지사항 */
+.notice {
+    margin-right: 60px;
+    line-height: 2;
+}
+
+.notice li {
+    border-bottom: 1px solid #ccc;
+}
+
+.notice a:hover {
+    font-weight: 700;
+    /* background: rgba(255, 182, 193, 0.432); */
+    /* text-decoration: underline; */
+}
+
+.notice span {
+    /* width크기 지정하려고 인라인블록화, 블록으로 하면 줄바꿈되니까 */
+    display: inline-block;
+    width: 510px;
+    /* 수직 정렬 */
+    vertical-align: top;
+}
+
+.gallery div {
+    display: flex;
+}
+
+.gallery a {
+    height: 170px;
+    margin: 10px;
+}
+
+.gallery img {
+    display: block;
+    width: 180px;
+    height: 140px;
+    margin-bottom: 8px;
+}
+
+/* D영역 */
+footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    background: #000;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* 1340px */
+.flogo {
+    width: 200px;
+}
+
+.addr {
+    width: 900px;
+}
+
+.fs {
+    width: 240px;
+}
