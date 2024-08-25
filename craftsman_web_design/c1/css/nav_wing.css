@@ -1,6 +1,6 @@
 @charset "utf-8";
-
-/* *{
+/* 
+*{
     outline:1px solid lime;
 } */
 
@@ -40,6 +40,7 @@ nav{
     line-height: 2;
     text-align: center;
     padding:20px;
+
 }
 
 .main{
@@ -60,34 +61,32 @@ nav{
     color:#fff;
 }
 
-/* nav>ul>li>a:hover{
-    background: green;
-    color:#fff;
-}  */
-/* nav>ul>li:hover>a{
-    background: green;
-    color:#fff;
-}  */
 
-.sub li{
-    background: #fff ;
 
-}
 
 .sub{
-    height: 0;
+    height: 200px;
+    width:200px;
     opacity: 0;
     visibility: hidden;
-
+    position: absolute;
+    left:180px;
+    top:50px;
+    align-items: center;
 }
 
+.sub li{
+    background: blue;
+}
+
+
+
 .main>li:hover .sub{
-    height: 80px;
     opacity: 1;
     visibility: visible;
 }
 
-.sub>li:hover{
+.sub>li:hover a{
     background: blue;
 }
 
