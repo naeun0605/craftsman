@@ -155,26 +155,81 @@ nav{
     animation-delay: 4s;
 }
 
+#modal .popup{
+    background: #ffffff;
+    border: 2px solid skyblue;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 400px;
+    padding:24px;
+    z-index: 10;
+}
+
+#modal button{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+}
 
 .contents{
     height: 200px;
     display: flex;
 }
 
+.contents h2{
+    margin: 10px;
+}
+
 #notice{
     width: 400px;
+    line-height: 2;
+    margin-right: 40px;
 }
+
+
+
+#notice li{
+    border-bottom:1px solid #ccc;
+}
+
+#notice li:hover a{
+    font-weight: bold;
+    color:#000;
+}
+
+#notice span{
+    width: 300px;
+    display: inline-block;
+}
+
+
 
 #gallery{
     width: 400px;
+    margin-right: 50px;
+
 }
 
 #gallery ul{
     display: flex;
+
+}
+
+#gallery li{
+    margin-right: 10px;
 }
 
 #banner{
-    width: 400px;
+    width: 300px;
+    padding-top:30px;
+}
+
+#banner img{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -184,7 +239,36 @@ nav{
     background: skyblue;
 }
 
+.bottom{
+    position: relative;
+}
+
+#bottom_menu ul{
+    display: flex;
+}
+
+#bottom_menu li{
+    padding:16px;
+}
+
+#bottom_menu li a{
+    color:#fff;
+}
+
+#bottom_menu li a:hover{
+    font-size: 20px;    
+}
+
+#copyright{
+    color:#fff;
+}
 .left{
     position: absolute;
-    background: yellow;
+    left:30%;
+}
+
+.right{
+    position: absolute;
+    right:100px;
+    bottom:40px;
 }

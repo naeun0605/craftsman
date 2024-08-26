@@ -228,6 +228,7 @@ nav {
 }
 
 .notice{
+    background:yellow;
     margin-right: 20px;
     line-height: 2;
 }

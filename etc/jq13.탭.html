@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* p {
+            font-size: 50px;
+        } */
+
+        /* p.hidden{
+            display: none;
+        }
+         */
+
+        #tabs>div {
+            font-size: 50px;
+            display:none;
+        }
+
+        #tabs>div.on {
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>탭</h1>
+     <!-- <p>나는 단락이다.</p> -->
+
+    <div id="tabs">
+
+        <ul>
+            <li><a href="#tab1">공지사항</a></li>
+            <li><a href="#tab2">갤러리</a></li>
+        </ul>
+
+        <div class="on" id=""tab1>첫 번째 콘텐츠</div>
+        <div id="tab2">두 번째 콘텐츠</div>
+
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- - Google CDN -->  
+
+    <script>
+
+
+
+        /* 문제2. 버튼1을 클릭하면 첫 번째 콘텐츠가 보이고. 두 번째 콘텐츠는 숨기고 버튼2를 클릭하면 두 번째 콘텐츠는 보이고, 첫 번째 콘텐츠는 숨기시오 (단, classList 사용) */
+
+
+          //1. 요소 찾기
+        const btn1 = $('#tabs a').eq(0);
+        const btn2 = $('#tabs a').eq(1);
+        const cont1 = $('#tabs>div').eq(0);
+        const cont2 = $('#tabs>div').eq(1);
+
+        //확인방법
+        // console.log(btn1);
+        // console.log(btn2);
+        // console.log(cont1);
+        // console.log(cont2);
+
+        
+        btn1.click(function(){
+            cont1.addClass('on');
+            cont2.removeClass('on');
+        });
+
+        btn2.click(function(){
+            cont2.addClass('on');
+            cont1.removeClass('on');
+        });
+
+
+    </script>
+    </body>
+</html>

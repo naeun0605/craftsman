@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유진건설</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -56,17 +58,28 @@
                     <li><a href="#"><img src="./images/s1.jpg" alt="이미지1"></a></li>
                 </ul>
             </div>
+
+            <div id="modal">
+                <div class="popup">
+                    <h2>상반기 신입/경력 사원 채용 공고</h2>
+                    <p>국내 최고의 건설회사로 발돋움하고 있는 유진건설에서는 열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다.</p>
+                    <button>닫기</button>
+                </div>
+            </div>
+
+
             <div class="contents">
                 <div id="notice">
                     <h2>공지사항</h2>
                     <ul>
-                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur 0000.00.00</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur 0000.00.00</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur 0000.00.00</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur 0000.00.00</a></li>
+                        <li><a href="#"><span>상반기 신입/경력 사원 채용 공고</span>2020.11.20</a></li>
+                        <li><a href="#"><span>건설의 날 기념 행사를 안내해드립니다.</span>2020.11.20</a></li>
+                        <li><a href="#"><span>대학생 대상 건설현장 탐방기</span>2020.11.20</a></li>
+                        <li><a href="#"><span>유진건설, 시공편가 순위 상위 5위 달성</span>2020.11.20</a></li>
                     </ul>
                 </div>
                 <div id="gallery">
+                    <h2>갤러리</h2>
                     <ul>
                         <li><a href="#"><img src="./images/g1.jpg" alt="갤러리1"></a></li>
                         <li><a href="#"><img src="./images/g2.jpg" alt="갤러리2"></a></li>
@@ -80,12 +93,30 @@
             <footer>
                 <div class="bottom">
                     <div class="left">
-                        <div id="bottom_menu"></div>
-                        <div id="copyright"></div>
+                        <div id="bottom_menu">
+                            <ul>
+                                <li><a href="#">하단메뉴1</a></li>
+                                <li><a href="#">하단메뉴2</a></li>
+                                <li><a href="#">하단메뉴3</a></li>
+                            </ul>
+                        </div>
+                        <div id="copyright">
+                            Copyright by NAEUN. ALL RIGHTS RESERVED.
+                        </div>
                     </div>
-                    <div class="right"></div>
+                    <div class="right">
+                        <div class="fs">
+                            <select name="fs" id="fs">
+                                <option value="fs1">패밀리사이트1</option>
+                                <option value="fs2">패밀리사이트2</option>
+                                <option value="fs3">패밀리사이트3</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </footer>
+
+           
         </div>
     </div>
 </body>
