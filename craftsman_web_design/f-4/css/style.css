@@ -43,8 +43,9 @@ header {
     align-items: center;
     padding: 0 30px;
     height: 100px;
-    /* width: 100px; */
+    width: 1340px;
     margin: 0 auto;
+    background: #000;
 }
 
 /* 로고 */
@@ -58,10 +59,6 @@ nav {
     align-self: flex-end;
 }
 
-.gnb {
-    margin-top: 20px;
-    background: #afafaf8a;
-}
 
 /* 1depth */
 .main {
@@ -82,20 +79,19 @@ nav {
 }
 
 /* 2depth */
-.sub {
+/* .sub {
     height: 0;
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
     padding: 10px 0 20px;
-    /* 숫자가 작을 수록 빠르다. */
     transition: 0.3s;
     line-height: 2;
-}
+} */
 
 /* 선택자가 변경됨: >li 제거 */
 /* 유형1: .main>li:hover .sub { */
-.main:hover .sub {
+/* .main:hover .sub {
     height: 150px;
     visibility: visible;
     opacity: 1;
@@ -107,20 +103,20 @@ nav {
 
 .sub li:hover a {
     background: #c9a7a7;
-}
+} */
 
 /* 유형3의 추가 코드 */
 
-.gnb {
+/* .gnb {
     position: relative;
-}
+} */
 
-.main {
+/* .main {
     border: 1px solid;
     height: 30px;
-}
+} */
 
-.main::before {
+/* .main::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -132,12 +128,12 @@ nav {
     opacity: 0;
     transition: 0.3s;
     background: rgba(240, 119, 119, 0.5);
-}
+} */
 
-.main:hover::before {
+/* .main:hover::before {
     height: 150px;
     opacity: 1;
-}
+} */
 
 /* B영역 */
 #slide {

@@ -1,4 +1,4 @@
-@charset "utf-8"
+@charset "utf-8";
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -32,7 +32,6 @@ header h1 a {display: block;}
 nav {width: 100%; position: relative; z-index: 10; }
 
 
-nav>ul{  }
 nav>ul>li {width: 160px; margin:0 auto;  position: relative;}
 nav>ul>li>a {display: block; font-size: 16px;  padding:20px;  }
 nav>ul>li:hover>a { background: tan; color: #fff; font-weight: 900;  }

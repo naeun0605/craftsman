@@ -33,13 +33,72 @@ a{
     width: 200px;
     height: 650px;
 }
-.main{
+nav{
     font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+    text-align: center;
+    /* padding:20px; */
+    /* width: 100%; */
+
 }
+
+.main{
+    margin:24px;
+}
+
+.main>li{
+    padding:16px;
+    position: relative;
+    
+}
+
+.main>li:hover{
+    border:3px solid blue;
+}
+
+
 .sub{
-    display: flex;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: normal;
+    height: 100px;
+    width:1000px; 
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left:150px;
+    top:0px;
+    /* align-items: center; */
+    background: rgb(0, 0, 255);
+    z-index: 10;
 }
+
+.sub li{
+    display:inline;
+    padding:24px;
+    text-align: left;
+}
+
+.sub li a{
+    color:#fff;
+    height: 100px;
+    line-height: 100px;
+}
+
+.main:hover .sub{
+    opacity: 1;
+    visibility: visible;
+    text-align: left;
+    
+}
+
+
+.sub>li:hover{
+    background: rgb(1, 1, 107);
+}
+
+
+
 .right{
     width: 800px;
     height: 650px;

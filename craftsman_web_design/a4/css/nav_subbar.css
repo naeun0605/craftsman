@@ -66,7 +66,7 @@ nav{
 }
 
 .main>li:hover{
-    background: #fff;
+    background: red;
 }
 
 .main>li:hover a{

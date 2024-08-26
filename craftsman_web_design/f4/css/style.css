@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-*{
-    outline: 1px solid red;
-}
 
 * {
     box-sizing: border-box;
@@ -39,16 +36,14 @@ img{
     height: 100%;
 }
 
-
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 30px;
-    height: 100px;
+    background: pink;
     width: 1340px;
+    height: 100px;
     margin: 0 auto;
-    background: lime;
 }
 
 .logo{
@@ -57,29 +52,22 @@ header{
 }
 
 nav{
-    align-self:flex-end;
+    align-self: flex-end;
 }
 
 .main{
     display: flex;
-    font-size: 1.8rem;
-    font-weight: bold;
 }
 
-.main>li>a{
-    display:inline-block;
-    padding:16px 24px;
+.main>li{
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
 
-.main>li>a:hover{
-    background: #e31a40;
-}
-
-.sub{
-    display: none;
-    font-size: 1.4rem;
-    font-weight: normal;
-    /* height: 0; */
+.main>li:hover{
+    background: red;
 }
 
 #slide{
