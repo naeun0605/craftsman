@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언 메뉴</title>
+    <style>
+        /* 초기값 */
+        * {box-sizing: border-box;}
+        body,ul {margin:0;}
+        ul {list-style: none; padding:0;}
+        a {text-decoration: none;}
+        body {
+            font-size: 15px;
+            line-height: 1.6;
+            font-family: "굴림", sans-serif;
+            background: #fff;
+        }
+
+        header {
+            width: 200px;
+            height: 650px;
+            border: 1px solid;
+            padding: 16px;
+        }
+
+        /* 1depth */
+        .main>li {
+            background: rgb(210, 86, 86);
+            text-align: center;
+            border-bottom: 1px solid rgb(174, 40, 40);
+            padding: 8px 0;
+        }
+        .main>li>a {
+            position: relative;
+            font-size: 16px;
+            color: #333;
+            padding-bottom: 4px;
+        }
+        .main>li>a::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left:0;
+            top:18px;
+            border-bottom: 2px solid rgb(174, 40, 40);
+            transition: .3s;
+            transform: scaleX(0);
+        }
+        .main>li>a:hover::after {
+            color: #fff;
+            transform: scaleX(1);
+        }
+        /* 2depth */
+        .sub {
+            height: 0;
+            overflow:hidden;
+            /* visibility: hidden; */
+            /* opacity: 0; */
+            /* border-top: 1px solid rgb(181, 11, 11); */
+            transition: .7s;
+        }
+        .main>li:hover .sub {
+            height: 150px;
+        }
+        .sub li a {
+            font-size: 14px;
+            color: #333;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li><a href="#">분양단지</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">분양중인 단지</a></li>
+                        <li><a href="#">분양예정 단지</a></li>
+                        <li><a href="#">분양완료 단지</a></li>
+                        <li><a href="#">연간분양계획</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">브랜드</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">브랜드 아이덴티티</a></li>
+                        <li><a href="#">특화아이템</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">아너스빌 멤버스</a>
+                    <ul class="sub">
+                        <li><a href="#">아너스빌 소식</a></li>
+                        <li><a href="#">청약가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">마이 아너스빌</a>
+                    <ul class="sub">
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">A/S 문의</a></li>
+                        <li><a href="#">관심단지 관리</a></li>
+                        <li><a href="#">개인정보 변경</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
