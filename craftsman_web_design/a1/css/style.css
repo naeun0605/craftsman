@@ -5,162 +5,166 @@
     box-sizing: border-box;
 }
 
-body, ul, p{
-    margin:0;
+body,
+ul,
+p {
+    margin: 0;
 }
 
-ul{
-    padding:0;
-    list-style:none;
+ul {
+    padding: 0;
+    list-style: none;
 }
 
-a{
-    text-decoration:none;
-    color:#333;
+a {
+    text-decoration: none;
+    color: #333;
 }
 
-img{
-    vertical-align:top;
+img {
+    vertical-align: top;
 }
-
 
 /* common */
-#wrap{
+#wrap {
     width: 1200px;
     margin: 0 auto;
 }
 
-body{
+body {
     font-size: 14px;
-    line-height:1.6;
-    background:#ffffff;
-    color:#333;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #333;
 }
 
 /* header */
-header{
-    /* Q1. 얘를 해주니까 이미지 밑으로 가려졌던 네비게이션 메뉴들이 이미지 위로 올라왔는데 왜 그런건가요 z-index하기 전부터 z-index를 하려고 position을 써준건가요 ??*/
-    position:relative;
+header {
+    position: relative;
     z-index: 1;
     display: flex;
-    justify-content:space-between;
-    align-items:center;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 24px;
     height: 100px;
 }
 
 /* nav */
 /* 1depth */
-#gnb .main{
+#gnb .main {
     display: flex;
     font-size: 16px;
     font-weight: bold;
 }
 
-#gnb .main>li{
+#gnb .main>li {
     width: 160px;
     height: 30px;
     text-align: center;
     line-height: 30px;
 }
 
-#gnb .main>li:hover{
+#gnb .main>li:hover {
     background: #333;
 }
 
 #gnb .main>li:hover>a {
-    color:#ccc;
+    color: #ccc;
 }
 
 /* 2depth */
-#gnb .sub{
-    /* Q2. height:0하고 overflow:hidden하는거랑 visibility:hidden하는거랑 opacity:0하는거랑 다 똑같은 기능인데 왜 세개 다 쓰나요 */
+#gnb .sub {
     height: 0;
-    /* Q3. height:0하고 overflow:hidden하기 전에 왜 높이 조금 가지나요? */
-    overflow:hidden;
-    visibility:hidden;
-    opacity:0;
-
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
     padding: 10px 0 20px;
     background: rgba(0, 0, 0, .5);
     transition: .3s;
-    line-height:2;
+    line-height: 2;
     font-size: 14px;
     font-weight: normal;
 }
 
-#gnb .main:hover .sub{
+#gnb .main:hover .sub {
     height: 150px;
-    visibility:visible;
-    opacity:1;
+    visibility: visible;
+    opacity: 1;
 }
 
-#gnb .sub li a{
+#gnb .sub li a {
     padding: 4px 16px;
-    color:#ccc;
+    color: #ccc;
 }
 
-#gnb .sub li:hover a{
+#gnb .sub li:hover a {
     background: #111;
-    color:#fff;
+    color: #fff;
 }
 
 /* slide */
-#slide{
-    overflow:hidden;
+#slide {
+    overflow: hidden;
     height: 300px;
 }
 
-#slide ul{
-    /* Q4. 이건 왜 쓰신거져?? 주석처리하니까 슬라이드가 멈추고 absolute하니까 사진 네개가 한번에 움직여요 , 밑에 top값을 바꿔줘도 차이가 없어요*/
+#slide ul {
     position: relative;
-    top:0;
+    top: 0;
     animation: slide 6s infinite;
 }
 
-@keyframes slide{
-    0%{
-        top:0;
+@keyframes slide {
+    0% {
+        top: 0;
     }
-    10%{
-        top:-100%;
+
+    10% {
+        top: -100%;
     }
-    33%{
-        top:-100%;
+
+    33% {
+        top: -100%;
     }
-    43%{
-        top:-200%;
+
+    43% {
+        top: -200%;
     }
-    66%{
-        top:-200%;
+
+    66% {
+        top: -200%;
     }
-    76%{
-        top:-300%;
+
+    76% {
+        top: -300%;
     }
-    99.99%{
-        top:-300%;
+
+    99.99% {
+        top: -300%;
     }
-    100%{
-        top:0;
+
+    100% {
+        top: 0;
     }
 }
 
+
 /* modal popup */
-#modal{
+#modal {
     display: none;
-    position:fixed;
-    top:0px;
-    left:0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
     z-index: 2;
 }
 
-#modal .popup{
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin:-175px 0 0 -300px;
+#modal .popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -175px 0 0 -300px;
     background: #fff;
     width: 600px;
     height: 350px;
@@ -168,123 +172,116 @@ header{
     padding: 20px;
 }
 
-#modal .popup p{
-    margin:20px;
-    line-height:2;
+#modal .popup p {
+    margin: 20px;
+    line-height: 2;
 }
 
-#modal .popup button{
-    position:absolute;
-    right:24px;
-    bottom:24px;
+#modal .popup button {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
     margin-top: 100px;
     padding: 5px 10px;
 }
 
 /* main contents */
-#main_contents{
+#main_contents {
     display: flex;
     padding-top: 10px;
 }
 
-.banner{
+.banner {
     margin: 0 20px;
 }
 
 /* tabs */
-
-/* 탭 전체*/
-#tabs{
-   /* Q5. left,top같은 값도 안주는데 position왜 주신걸까요? */
-    position:relative;
+/* tabs button */
+#tabs {
+    position: relative;
     width: 400px;
 }
 
-#tabs>ul{
+#tabs>ul {
     display: flex;
     margin-left: 20px;
 }
 
-/* 공지사항 왼쪽 테두리 */
-#tabs>ul li:first-child{
-    border-left:1px solid #ccc;
+#tabs>ul li:first-child {
+    border-left: 1px solid #ccc;
 }
 
-/* 공지사항, 갤러리 탭 */
-#tabs>ul li{
-    /* Q6. 얘도 left, top같은거 안주셨는데 왜 주신거져 */
-    position:relative;
+#tabs>ul li {
     z-index: 0;
+    position: relative;
     border: 1px solid #ccc;
-    border-bottom:none;
-    border-left:none;
-    padding:8px 10px;
+    border-bottom: none;
+    border-left: none;
+    padding: 8px 10px;
     background: #999;
 }
 
-/* 공지사항 탭 */
-#tabs>ul li.on{
-    /* Q7. 차이가 없는데 position줘야 쓸수있지않나요?*/
+#tabs>ul li.on {
     z-index: 1;
     background: #fff;
 }
 
-/* 탭 안에 컨텐츠들*/
-#tabs>div{
-    position:absolute;
+/* tabs common contents */
+#tabs>div {
+    position: absolute;
     width: 100%;
     top: 38px;
-    display:none;
+    display: none;
     border: 1px solid #ccc;
     padding: 16px 20px;
 }
 
-#tabs>div.on{
-    display:block;
+#tabs>div.on {
+    display: block;
 }
 
 /* notice */
-#tab1 li{
-    line-height:1.8;
+#tab1 li {
+    line-height: 1.8;
 }
 
-#tab1 a{
-    display:inline-block;
+#tab1 a {
+    display: inline-block;
     width: 280px;
     text-overflow: ellipsis;
-    overflow:hidden;
-    text-wrap:nowrap;
-    padding-right:24px;
-    vertical-align:middle;
+    overflow: hidden;
+    text-wrap: nowrap;
+    padding-right: 24px;
+    vertical-align: middle;
 }
 
 /* gallery */
-#tab2{
+#tab2 {
     padding: 17px 20px;
 }
 
-#tab2 img{
+#tab2 img {
     width: 110px;
 }
 
 #tab2 a:nth-of-type(2) {
-    margin:0 8px;
+    margin: 0 8px;
 }
 
 /* footer */
-footer{
+footer {
     display: flex;
-    align-items:center;
+    align-items: center;
     text-align: center;
     height: 100px;
     background: #777;
 }
 
-.flogo{
+.flogo {
     width: 260px;
 }
 
-.copy{
+.copy {
     width: 680px;
 }
 
@@ -293,6 +290,6 @@ footer{
     margin-top: 10px;
 }
 
-.sns li{
-    display:inline-block;
+.sns li {
+    display: inline-block;
 }
