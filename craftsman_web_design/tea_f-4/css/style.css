@@ -45,7 +45,6 @@ header {
     height: 100px;
     width: 1340px;
     margin: 0 auto;
-    background: #000;
 }
 
 /* 로고 */
@@ -79,7 +78,7 @@ nav {
 }
 
 /* 2depth */
-/* .sub {
+.sub {
     height: 0;
     overflow: hidden;
     visibility: hidden;
@@ -87,11 +86,11 @@ nav {
     padding: 10px 0 20px;
     transition: 0.3s;
     line-height: 2;
-} */
+}
 
 /* 선택자가 변경됨: >li 제거 */
 /* 유형1: .main>li:hover .sub { */
-/* .main:hover .sub {
+.main:hover .sub {
     height: 150px;
     visibility: visible;
     opacity: 1;
@@ -107,16 +106,16 @@ nav {
 
 /* 유형3의 추가 코드 */
 
-/* .gnb {
+.gnb {
     position: relative;
-} */
+}
 
-/* .main {
+.main {
     border: 1px solid;
     height: 30px;
-} */
+}
 
-/* .main::before {
+.main::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -128,12 +127,12 @@ nav {
     opacity: 0;
     transition: 0.3s;
     background: rgba(240, 119, 119, 0.5);
-} */
+}
 
-/* .main:hover::before {
+.main:hover::before {
     height: 150px;
     opacity: 1;
-} */
+}
 
 /* B영역 */
 #slide {
@@ -282,7 +281,7 @@ nav {
 
 /* 공지사항 */
 .notice {
-    margin-right: 60px;
+    margin-right: 20px;
     line-height: 2;
 }
 

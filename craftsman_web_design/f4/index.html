@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하이글로벌컴퍼니</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/script.js"></script>
+</head> 
 
+<body>
     <!-- A -->
     <header>
-        <h1 class="logo"><a href="#"><img src="./images/logo2.png" alt="로고"></a></h1>
+        <!-- logo -->
+        <h1 class="logo"><a href="#">로고</a></h1>
+        <!-- nav -->
+        <!-- nav>ul.main>li*4>a[href="#"]+ul.sub>li*4>a[href="#"] -->
         <nav>
             <ul class="main">
                 <li>
                     <a href="#">회사소개</a>
                     <ul class="sub">
-                        <li><a href="#">CEO인사말</a></li>
+                        <li><a href="#">CEO 인사말</a></li>
                         <li><a href="#">기업문화</a></li>
                         <li><a href="#">경영방침</a></li>
                         <li><a href="#">회사연혁</a></li>
@@ -26,7 +33,7 @@
                     <a href="#">사업소개</a>
                     <ul class="sub">
                         <li><a href="#">반도체 설비운영</a></li>
-                        <li><a href="#">건축공사</a></li>
+                        <li><a href="#">건축 공사</a></li>
                         <li><a href="#">UHP 배관 공사</a></li>
                     </ul>
                 </li>
@@ -52,81 +59,109 @@
     <!-- B -->
     <div id="slide">
         <ul>
-            <!-- <li><a href="#"><img src="./images/s1.png" alt="슬라이드1"></a></li>
-            <li><a href="#"><img src="./images/s2.png" alt="슬라이드2"></a></li>
-            <li><a href="#"><img src="./images/s3.png" alt="슬라이드3"></a></li>
-            <li><a href="#"><img src="./images/s1.png" alt="슬라이드1"></a></li> -->
+            <li><a href="#"><img src="./images/s1.png" alt="슬라이드 이미지1"></a></li>
+            <li><a href="#"><img src="./images/s2.png" alt="슬라이드 이미지2"></a></li>
+            <li><a href="#"><img src="./images/s3.png" alt="슬라이드 이미지3"></a></li>
+            <li><a href="#"><img src="./images/s1.png" alt="슬라이드 이미지1"></a></li>
         </ul>
     </div>
 
-    <!-- C, D -->
     <div class="container">
-        <!-- C -->
+        <!-- C영역 -->
         <div class="contents">
 
+            <!-- 바로가기 링크 -->
             <div id="link">
                 <ul>
-                    <li><a href="#"><img src="./images/quick.jpg" alt="링크1"></a></li>
-                    <li><a href="#"><img src="./images/quick.jpg" alt="링크2"></a></li>
-                    <li><a href="#"><img src="./images/quick.jpg" alt="링크3"></a></li>
-                    <li><a href="#"><img src="./images/quick.jpg" alt="링크4"></a></li>
-                    <li><a href="#"><img src="./images/quick.jpg" alt="링크5"></a></li>
+                    <li><a href="#"><img src="./images/s1.png"alt="링크1">링크1</a></li>
+                    <li><a href="#"><img src="./images/s1.png"alt="링크2">링크2</a></li>
+                    <li><a href="#"><img src="./images/s1.png"alt="링크3">링크3</a></li>
+                    <li><a href="#"><img src="./images/s1.png"alt="링크4">링크4</a></li>
+                    <li><a href="#"><img src="./images/s1.png"alt="링크5">링크5</a></li>
                 </ul>
             </div>
 
+            <!-- 배너 -->
             <div id="banner">
-                <a href="#"><img src="./images/banner.jpg" alt="배너"></a>
+                <a href="#"><img src="./images/s2.png"alt="배너 이미지"></a>
                 <div class="txt">
-                    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quibusdam cumque voluptate commodi
                         repellat modi sequi nulla, consequatur facere vitae, nesciunt odit assumenda at ipsa, quae iure
                         sunt.</p>
                 </div>
-                <a href="#"><img src="./images/arrow.png" alt="화살표"></a>
+                <a href="#"><img src="images/arrow.png" alt="화살표 아이콘"></a>
             </div>
 
-            <div id="board">
+            <!-- 모달팝업 -->
+            <!-- 페이지 가리는 용도로 -->
+            <div id="modal">
+                <!-- 실제 팝업 -->
+                <div class="popup">
+                    <h2>모달 팝업</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos provident consectetur tempora
+                        debitis
+                        voluptate natus officia expedita qui accusantium nobis maiores dignissimos fugit, fugiat rerum,
+                        iusto
+                        facere incidunt, reprehenderit dolor!</p>
+                    <button>닫기</button>
+                </div>
+            </div>
 
+            <!-- 공지사항과 갤러리 -->
+            <div id="board">
                 <div class="notice">
                     <h2>공지사항</h2>
                     <ul>
 
                         <li>
-                            <a href="#"><span>맞춤 플랜을 제안하는 크리에이티브 입니다.</span>2019.03.20</a>
+                            <a href="#"><span>맞춤 플랜을 제안하는 크리에이티브 입니다.</span> 2019.03.20</a>
+
                         </li>
 
                         <li>
-                            <a href="#"><span>Just 쇼핑몰과 함께 하실 가슴 따뜻한 이야기를 확인해보세요.</span>2019.05.15</a>
+                            <a href="#"><span>JUST 쇼핑몰과 함께 하실 가슴 따뜻한 이야기를 확인해 보세요.</span> 2019.05.15</a>
+
                         </li>
 
                         <li>
-                            <a href="#"><span>코리아웨딩페어 결혼박람회가 열립니다.</span>2019.07.13</a>
+                            <a href="#"><span>코리아웨딩페어 결혼박람회가 열립니다.</span> 2019.07.13</a>
+
                         </li>
 
                         <li>
-                            <a href="#"><span>마진없이 아낌없이 드리는 마지막 찬스!</span>2019.09.28</a>
+                            <a href="#"><span>마진없이 아낌없이 드리는 마지막 찬스!</span> 2019.09.28</a>
+
                         </li>
 
                     </ul>
                 </div>
 
+
                 <div class="gallery">
                     <h2>갤러리</h2>
                     <div>
-                        <a href="#"><img src="./images/g3.jpg" alt="이미지1">Lorem ipsum dolor sit amet.</a>
-                        <a href="#"><img src="./images/g3.jpg" alt="이미지1">Lorem ipsum dolor sit amet.</a>
-                        <a href="#"><img src="./images/g3.jpg" alt="이미지1">Lorem ipsum dolor sit amet.</a>
+                        <a href="#"><img
+                                src="https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="갤러리1">Lorem ipsum dolor sit am</a>
+                        <a href="#"><img
+                                src="https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="갤러리2">Lorem ipsum dolor sit am</a>
+                        <a href="#"><img
+                                src="https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="갤러리3">Lorem ipsum dolor sit am</a>
                     </div>
                 </div>
+            </div>
 
-
-            </div><!-- board -->
-        </div><!-- contents -->
-
-        <!-- D -->
+        </div>
+        <!-- D영역 -->
         <footer>
-            <div class="flogo"><a href="#"><img src="./images/logo2.png" alt="하단로고"></a></div>
-            <p class="copy">Copyright 회사명. All rights reserved.</p>
+            <!-- 하단로고 -->
+            <div class="flogo"><a href="#">하단로고</a></div>
+            <!-- 저작권 표기 -->
+            <p class="addr">Copyright 회사명. All rights reserved.</p>
+            <!-- 패밀리 사이트 -->
             <div class="fs">
                 <select name="fs" id="fs">
                     <option value="fs1">패밀리사이트1</option>
@@ -135,8 +170,7 @@
                 </select>
             </div>
         </footer>
-
-    </div><!-- container -->
-
+    </div>
 </body>
+
 </html>
