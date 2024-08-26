@@ -1,0 +1,124 @@
+@charset "utf-8"
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+ 
+/* 폰트적용 (시험내용 아님) */
+
+
+
+*, *::before, *::after {box-sizing: border-box; margin:0; padding:0;}
+
+body{background: #fff; margin:0; padding:0; color:#333; width: 100%; height:  100%; box-sizing: border-box; 
+    font-family: 'Pretendard-Regular'; font-weight: 400;}
+li {list-style: none;}
+table {max-width: 100%; border-collapse: collapse;}
+tr,td,th {border: 0; }
+img {vertical-align: top; max-width: 100%;}
+a {text-decoration: none; color:inherit;}
+ul,p,h2,h3,span {margin:0; padding:0;}
+
+
+
+.wrap {width: 100%; height: 920px;}
+.inner {width: 100%; height: 800px; display: flex; flex-direction: row;}
+header {width: 200px; height: 800px; }
+
+header h1 a {display: block;}
+nav {width: 100%; position: relative; z-index: 10; }
+
+
+nav>ul{  }
+nav>ul>li {width: 160px; margin:0 auto;  position: relative;}
+nav>ul>li>a {display: block; font-size: 16px;  padding:20px;  }
+nav>ul>li:hover>a { background: tan; color: #fff; font-weight: 900;  }
+
+
+.sub { display: none;  position: absolute; top: 0; left: 180px;   width: 1000px; height: 200px;   }
+    
+.sub>li {   display: inline; } 
+
+.sub>li>a {    display: inline-table;  width: 160px; color: #fff;  font-size: 16px; padding: 20px;  }
+.sub>li>a:hover {background: tan;   color: #fff; font-weight: 900;}
+
+
+.m_bg { position: absolute;  display: none;
+ height: 244px; width: calc(100% - 180px); top: 200px; left: 180px; 
+  background: rgba(0,0,0,.8); z-index: 8; }
+
+
+
+
+
+
+.contents {width: calc(100% - 200px); }
+
+.slide {width: 100%; overflow: hidden;  height: 400px; position: relative;  }
+
+.slide ul{width: 100%;  position: absolute; top: 0; left: 0;}
+.slide ul li {position: relative;}
+.slide ul li a {display: block; position: absolute; bottom: 0; text-align: center; width: 100%;
+ padding: 20px; background: rgba(0,0,0,.7); color: #fff;}
+.slide .s1 {background: url(../img/slide1.jpg)no-repeat center/cover; height: 400px;}
+.slide .s2 {background: url(../img/slide2.jpg)no-repeat center/cover; height: 400px;}
+.slide .s3 {background: url(../img/slide3.jpg)no-repeat center/cover; height: 400px;}
+
+
+
+
+
+.link {width:  100%;  height: 150px;   margin:0 auto; text-align: center;}
+.link ul {width:  100%; height: 150px;  display: flex; flex-direction: row; align-items: center; justify-content: center;}
+.link ul li {flex:1; }
+.link ul li p {font-size: 14px;  }
+
+.cont {display: flex; flex-direction: row; width: 100%; height: 250px;}
+.cont .notice {flex:1;  }
+.cont .notice h2 {padding: 16px 10px; text-align: center;
+    width:120px; font-size: 18px; background: tan; color:#fff; border-radius: 100px;}
+ 
+.cont .notice table {    width: 100%; margin-top: 30px; text-align: left; margin-left: 50px; font-size: 14px;}
+.cont .notice table tr { display: flex; flex-direction: row; width: 100%; }
+.cont .notice table tr th { flex:2; margin:0;}
+.cont .notice table tr td {flex:1; margin:0;}
+
+
+.cont .gall {flex:1;   width: 100%; 
+     overflow: hidden;  height: 100%; box-sizing: border-box;}
+.cont .gall h2 {padding: 16px 10px; text-align: center;
+    width:120px; font-size: 18px; background: tan; color:#fff; border-radius: 100px;}
+
+
+.cont .gall ul { width: 100%; display: flex;  justify-content: center;
+        padding: 20px; margin:0 auto; text-align: center;}
+.cont .gall ul li {  padding: 0 20px 20px 0; width: 17%;   }
+.cont .gall ul p {font-size: 14px; padding:5px;}
+
+
+footer {height: 120px; background: #222; color:#fff; bottom:0; display: flex; width: 100%;}
+
+.f_text {flex:5;}
+.f_text ul {display: flex; }
+.f_text ul li { width: 100px; font-size: 12px; padding: 20px; text-align: center;}
+.f_text ul li a {  border-right: 1px solid #fff; padding-right: 20px;}
+.f_text ul li:last-child a {border-right: 0;}
+
+.f_text p {font-size: 12px; padding: 20px;}
+
+
+.f_logo {flex:0.5; box-sizing: border-box;  }
+.f_logo a img {width: 60%; right: 0; }
+
+
+.popup { display: none;
+     position: absolute; top: 0; left: 0;
+     background: rgba(0,0,0,.8); width: 100%; height: 100%;
+}
+
+.popup div {width: 400px; margin: 0 auto;
+margin-top:5%; text-align: center;}
+
