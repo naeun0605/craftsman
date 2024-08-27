@@ -4,79 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        *{
-            box-sizing: border-box;
-        }
-
-        #modal{
-            background: skyblue;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top:0;
-            left:0;
-            display: none;
-        }
-
-        #modal .popup{
-            background: #fff;
-            width: 600px;
-            height: 400px;
-
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 24px;
-        }
-
-        #modal .popup button{
-            position: absolute;
-            bottom:20px;
-            right:20px;
-        }
-    </style>
-
-        <!-- 제이쿼리 라이브러리 -->
-        <script src="./script/jquery-3.7.1.min.js"></script>
-
-        <script>
-            $(document).ready(function(){
-                const first = $('#notice a').eq(0);
-                const modal = $('#modal');
-                const button = $('button')
-
-                first.click(function(){
-                    event.preventDefault();
-                    modal.css({display:"block"});
-                });
-
-                button.click(function(){
-                    modal.css({display:"none"});
-                })
-            });
-        </script>
-
 </head>
 <body>
-
-    <div id="notice">
-        <ul>
-            <li><a href="#">보라돌이</a></li>
-            <li><a href="#">뚜비</a></li>
-            <li><a href="#">나나</a></li>
-            <li><a href="#">뽀</a></li>
-        </ul>
-    </div>
-
-    <div id="modal">
-        <div class="popup">
-            <h2>모달 팝업</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, autem esse iure dolorem, obcaecati officia quisquam quas voluptates soluta blanditiis consequuntur eligendi assumenda facere quos iusto eos illum exercitationem perferendis.</p>
-            <button>닫기</button>
-        </div>
-    </div>
+    <header>
+        <h1 class="logo"></h1>
+    </header>
 </body>
 </html>

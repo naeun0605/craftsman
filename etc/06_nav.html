@@ -43,7 +43,7 @@
             margin: 30px;
         }
         
-        .gnb:hover::after {
+        nav:hover::after {
             content: "";
             position: absolute;
             width: calc(100% - 170px);
@@ -85,10 +85,12 @@
         .main:hover .sub {
             visibility: visible;
         }
-        .sub li {
+
+        /* /* .sub li {
             flex: 0 0 160px;
             padding: 10px 24px;
-        }
+        } */
+         
         .sub li a {
             font-size: 14px;
             padding: 4px 8px;
@@ -103,7 +105,7 @@
 <body>
     <header>
         <h1 class="logo"><a href="#">LOGO</a></h1>
-        <nav class="gnb">
+        <nav>
             <!-- 1depth -->
             <ul class="main">
                 <li>

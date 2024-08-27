@@ -31,11 +31,8 @@ img{
     margin:0 auto;
 }
 
-header{
-    position: relative;
-}
 
-header .container{
+header{
     background:skyblue;
     display:flex;
     justify-content:space-between;
@@ -43,6 +40,7 @@ header .container{
     height:100px;
     padding:0 24px;
 }
+
 
 nav{
     align-self:flex-end;
@@ -73,7 +71,7 @@ nav{
     color:#000;
 }
 
-.main::before{
+/* .main::before{
     content:"";
     position: absolute;
     top:100px;
@@ -89,6 +87,18 @@ nav{
     height: 150px;
     opacity: 1;
     visibility: visible;
+    z-index: 100;
+} */
+
+
+nav:hover::after{
+    content:"";
+    background: #fff;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left:0;
+    top: 100px;
     z-index: 100;
 }
 
@@ -113,24 +123,18 @@ nav{
 }
 
 #slide{
+    position: relative;
     width: 1200px;
     height: 300px;
     overflow: hidden;
-    /* position: relative; */
 }
-
-/* #slide ul{
-    position: relative;
-    
-} */
 
 #slide li{
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
-    animation:fade 6s infinite;
-
+    animation: fade 6s infinite;
 }
 
 @keyframes fade{
@@ -160,6 +164,7 @@ nav{
 #slide li:nth-child(3){
     animation-delay: 4s;
 }
+
 #modal{
     display: none;
 }

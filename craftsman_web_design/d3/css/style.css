@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+/* *{
+    outline:1px solid red;
+} */
+
+*{
+    box-sizing: border-box;
+}
+
+body, ul, p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+body{
+    font: 15px "글림", sans-serif;
+}
+
+.wrap{
+    width: 100%;
+    height: 970px;
+}
+
+header{
+    width: 200px;
+    height: 850px;
+}
+
+.logo{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+}
+
+.main{
+    margin: 24px;
+    border: 5px solid orange;
+}
+
+.main>li{
+    padding:8px;
+}
+
+.main>li:hover {
+    background: orange;
+}
+
+.main li:hover a{
+    color:#fff;
+}
+
+.main li a{
+    font-size: 16px;
+    color:orangered;
+    font-weight: bold;
+}
+
+nav:hover::after{
+    content:"";
+    width: calc(100% - 170px);
+    height: 160px;
+    background: orange;
+    position: absolute;
+    left: 170px;
+    top: 83px;
+    z-index: 100;
+}
+
+.sub{
+    display: flex;
+    position: absolute;
+    left: 200px;
+    margin-top: -37px;
+    width: calc(100% - 170px);
+    visibility: hidden;
+}
+
+.main:hover .sub{
+    visibility: visible;
+    z-index: 101;
+
+}
+
+.sub li{
+    flex:0 0 160px;
+    padding: 10px 24px;
+}
+
+.sub li a{
+    font-size: 14px;
+}
+
+.sub li a:hover{
+    font-size: 16px;
+}
+
+.top{
+    display: flex;
+}
+
+.tmenu{
+    margin:16px;
+    display: flex;
+}
+
+.tmenu a{
+    color:orangered;
+}
+
+
+.contents{
+    width:calc(100% - 200px);
+}
+
+#slide{
+    width:calc(100% - 200px);
+    height: 400px;
+    overflow: hidden;
+}
+
+#slide li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 6s infinite;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#slide li:nth-child(1){
+    animation-delay: 0s;
+}
+#slide li:nth-child(2){
+    animation-delay: 2s;
+}
+#slide li:nth-child(3){
+    animation-delay: 4s;
+}
+
+#link{
+    position: absolute;
+    right:0;
+    top:0;
+    display: inline;
+}
+
+#link img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#banner{
+    width:calc(100% - 200px);
+    height: 200px;
+}
+
+#banner a{
+    display: flex;
+    line-height: 1.5;
+    justify-content: space-between;
+    padding:32px;
+}
+
+#banner div{
+    padding:0 8px;
+}
+
+#banner h2{
+    margin:4px;
+}
+#banner img{
+    width: 100px;
+    height: 100px;
+}
+
+#tabs{
+    width:calc(100% - 200px);
+    height: 250px;
+}
+
+
+
+#tabs>ul{
+    display: flex;
+
+}
+
+#tabs>ul li{
+    background: orange;
+    padding:16px;
+}
+
+#tabs>div{
+    position: absolute;
+}
+
+#tab1{
+    width:calc(100% - 400px);
+    padding:24px;
+}
+
+#tab1 li{
+    padding: 8px 0;
+    border-bottom:1px solid #ccc;
+
+}
+
+#tab1 li:hover a{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+#tab1 span{
+    width: calc(100% - 100px);
+    display: inline-block;
+}
+
+#tab2{
+    display: none;
+    text-align: center;
+    padding-top: 40px;    
+}
+
+#tab2 img{
+    padding:16px;
+}
+
+.bottom{
+    width: 100%;
+    height: 120px;
+    background: orange;
+    display: flex;
+}
+
+.flogo{
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    padding:24px;
+
+}
+
+.me_co{
+    width: calc(100% - 200px);
+    padding:24px;
+    text-align: center;
+}
+
+#modal{
+    display: none;
+}
+
+#modal .popup{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    background: rgb(255, 166, 0);
+    padding: 24px;
+    line-height: 1.5;
+}
+
+#modal .popup button{
+    position: absolute;
+    right:20px;
+    bottom:20px;
+}
+

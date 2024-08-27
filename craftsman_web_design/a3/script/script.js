@@ -10,13 +10,13 @@ $(document).ready(function () {
         });
     });
    
-    // 팝업
     $("#tabs>div li").eq(0).click(function(){
         $("#modal").show();
     });
+
     $(".popup button").click(function(){
         $("#modal").hide();
-    });
+    })
 });
 
 
