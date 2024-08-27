@@ -4,12 +4,12 @@ $(document).ready(function(){
     });
 
     $(".popup button").click(function(){
-        $("#modal").hide();
+        $("#modal").hide()
     });
 
 
     $("#tabs>ul li").click(function(){
-        var i = $(this).index();
+        const i = $(this).index();
         $("#tabs>div").css({
             display:"none"
         });
@@ -18,5 +18,8 @@ $(document).ready(function(){
             display:"block"
         });
     })
+
+ 
+
 
 });
