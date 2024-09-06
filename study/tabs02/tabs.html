@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+    <link rel="stylesheet" href="tabs.css">
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/tabs.js" defer></script>
+</head>
+<body>
+    <!-- 탭스 -->
+    <div class="tabswrap">
+        <ul>
+            <li><a href="#notice">공지사항</a></li>
+            <li><a href="#gallery">갤러리</a></li>
+        </ul>
+        <div class="active" id="notice">
+            <a class="f1" href="#">Lorem ipsum dolor sit amet. <span>2024.08.18</span></a>
+            <a href="#">Lorem ipsum dolor sit amet. <span>2024.08.18</span></a>
+            <a href="#">Lorem ipsum dolor sit amet. <span>2024.08.18</span></a>
+            <a href="#">Lorem ipsum dolor sit amet. <span>2024.08.18</span></a>
+        </div>
+        <div id="gallery">
+            <a href="#"><img src="images/chem1.png" alt="이미지1"></a>
+            <a href="#"><img src="images/chem2.png" alt="이미지1"></a>
+            <a href="#"><img src="images/chem3.png" alt="이미지1"></a>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="popup">
+            <h3>공지내용 알림</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quas laborum! Quas, laborum asperiores.</p>
+            <button>닫기</button>
+        </div>
+    </div>
+    <footer>
+        <div class="btmleft">
+            <div class="btmmenu">
+                <a href="#"><span>하단메뉴1</span></a>
+                <a href="#"><span>하단메뉴2</span></a>
+                <a href="#"><span>하단메뉴3</span></a>
+                <a href="#"><span>하단메뉴4</span></a>
+                <a href="#"><span>하단메뉴5</span></a>
+                <a href="#"><span class="last1">하단메뉴6</span></a>
+            </div>
+            <div class="copy">
+                <p>All right reserved</p>
+            </div>
+        </div>
+        <div class="family">
+            <select name="family">
+                <option value="family">패밀리사이트1</option>
+                <option value="family">패밀리사이트2</option>
+                <option value="family">패밀리사이트3</option>
+            </select>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+/* 탭스 */
+.tabswrap {
+    position: relative;
+    height: 320px;
+}
+
+.tabswrap>ul {
+    display: flex;
+}
+.tabswrap>ul>li {
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #bbb;
+}
+#notice {
+    width: calc(100% - 800px);
+    height: 300px;
+    border: solid red;
+}
+#notice a {
+    position: relative;
+    padding: 12px 20px;    
+}
+#notice a:nth-of-type(2n){
+    background: #ddd;
+}
+#notice span {
+    position: absolute;
+    right: 20px;
+}
+#gallery {
+    position: absolute;
+    top: 40px;
+    /* display: flex; */
+    height: 300px;
+}
+#gallery a {
+    display: inline;
+}
+
+#gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 12px 20px;
+}
+.tabswrap>div {
+    display: none;
+}
+.tabswrap>div.active {
+    display: block;
+}
+
+/* modal */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.popup {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: #ccc;
+}
+.popup h3 {
+    text-align: center;
+    padding: 12px 0;
+}
+.popup button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+}
+.btmleft {
+    width: 1200px;
+    margin-top: 20px;   
+    border: solid blue;
+}
+.btmleft a {
+    display: inline;
+    /* padding: 0 20px;     */
+    color: #333;
+}
+.btmmenu {
+    margin-left: 300px;
+}
+.copy {
+    margin-top: 12px;
+    text-align: center;
+}
+.btmmenu a::after {
+  
+    content: "|";
+    padding-left: 12px;
+}
+.btmmenu a:last-child::after {
+    content: "";
+}
+.family {
+    margin-top: 20px;
+}

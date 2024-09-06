@@ -1,0 +1,467 @@
+@charset "utf-8";
+@import url(./reset.css);
+@import url(./common.css);
+
+/* index typo */
+#s1 h1, #s1 h2, #s1 p, #s5 h2, #s5 h3, #s5 span, #s5 input, #s5 textarea {
+    color: #fff;
+}
+
+#s1 h1, #s1 h2, #s1 p {
+    text-shadow: 0 0 5px #000;
+}
+
+#s1 p {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+#s4 p:nth-of-type(2) {
+    color: #b49f80;
+}
+
+#s5 ::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#s5 #send {
+    font-size: 20px;
+    font-weight: 600;
+    color: #363636;
+}
+
+/* scrollEvent */
+.scrollEvent {
+    position: fixed;
+    z-index: -1;
+}
+
+/* section01 */
+#s1 {
+    width: 1903px;
+    height: 920px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel li {
+    width: 1903px;
+    height: 920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel>div>div:nth-of-type(2) {
+    width: 24px;
+    height: 48px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: url(./../assets/mouse.png) no-repeat;
+}
+
+.slideText {
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+}
+
+.carousel>div span {
+    z-index: 2;
+    position: absolute;
+    top: 355px;
+    left: 50%;
+    transform: translate(-320px,0);
+    display: inline-block;
+    background: #FFD600;
+    width: 640px;
+    height: 10px;
+}
+
+.carousel iframe {
+    width: 1903px;
+    height: 920px;
+    pointer-events: none;
+}
+
+/* section02 */
+#s2 {
+    width: 1903px;
+    height: 920px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+
+#s2 .s2Contents {
+    width: 1903px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#s2 .s2Contents>div {
+    width: 950px;
+    height: 920px;
+}
+
+#s2 .s2Contents>div:nth-of-type(1) {
+    background: url(../assets/section2.png) no-repeat;
+}
+
+#s2 #s2Text {
+    position: relative;
+}
+
+#s2 #s2Text div {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 1s;
+}
+
+/* 섹션2 스크롤 모션 활성화 */
+#s2 #s2Text div.active {
+    top: 50%;
+    opacity: 1;
+}
+
+#s2 .s2Contents span {
+    display: inline-block;
+    width: 70px;
+    height: 1px;
+    background: #363636;
+    margin: 40px 0;
+}
+
+#s2 .s2Contents a {
+    display: inline-block;
+    border: 1px solid #363636;
+    margin-top: 40px;
+    width: 200px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    transition: .3s;
+}
+
+#s2 .s2Contents a:hover {
+    background: #363636;
+    color: #fff;
+}
+
+/* section03 */
+#s3 {
+    width: 1903px;
+    height: 920px;
+    position: relative;
+    background: #fff;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    margin-left: 40px;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.buttons label {
+    text-align: left;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.buttons [type="radio"]:checked+label {
+    font-size: 80px;
+    color: #E1A200;
+}
+
+.tab>div:nth-of-type(2) {
+    width: 960px;
+    height: 880px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.tabContent>div {
+    display: flex;
+}
+
+.tabContent>div>div {
+    display: none;
+    width: 312px;
+    height: 312px;
+    border-radius: 8px;
+    border: 1px solid rgba(114, 78, 10, .5);
+    background: rgba(255, 255, 255, .5);
+    margin-right: 20px;
+    padding: 25px 0 0 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.tabContent>div.on>div {
+    display: block;
+}
+
+.tabContent a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 312px;
+    height: 312px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.tabContent p {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.tabCicon {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 64px;
+    height: 64px;
+}
+
+#icon1 {
+    background: url(../assets/icon_best-price.png);
+}
+
+#icon2 {
+    background: url(../assets/icon_beer.png);
+}
+
+#icon3 {
+    background: url(../assets/icon_trend.png);
+}
+
+#icon4 {
+    background: url(../assets/icon_gift.png);
+}
+
+#icon5 {
+    background: url(../assets/icon_thank.png);
+}
+
+#icon6 {
+    background: url(../assets/icon_happy.png);
+}
+
+#tabImage1 {
+    width: 786px;
+    height: 548px;
+    background: url(../assets/corn.png);
+    position: absolute;
+    bottom: -80px;
+    left: -450px;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* 스크롤 모션 활성화 */
+#tabImage1.activate {
+    left: -120px;
+    opacity: 1;
+}
+
+#tabImage2 {
+    width: 542px;
+    height: 700px;
+    background: url(../assets/beer.png);
+    position: absolute;
+    bottom: 0;
+    transition: 1s;
+    right: -350px;
+    opacity: 0;
+}
+
+/* 스크롤 모션 활성화 */
+#tabImage2.activate {
+    right: 0;
+    opacity: 1;
+}
+
+/* section4 */
+#s4 .s4Contents {
+    width: 100%;
+    height: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F5F2E1;
+}
+
+#s4 .s4Contents span {
+    width: 1px;
+    height: 1000px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#s4 .s4Contents ul {
+    width: 1903px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#s4 .s4Contents li div {
+    width: 32px;
+    height: 32px;
+    background: url(../assets/deco.png);
+}
+
+#s4 .s4Contents li {
+    width: 510px;
+    height: 920px;
+    position: relative;
+}
+
+#s4 .s4Contents li:nth-of-type(2) {
+    top: 120px;
+}
+
+#s4 .s4Contents li:nth-of-type(3) {
+    top: 60px;
+}
+
+#s4 li p:nth-of-type(1) {
+    text-align: left;
+}
+
+#s4 .s4Contents li p:nth-of-type(2) {
+    text-align: right;
+    rotate: 90deg;
+    position: absolute;
+    right: -64px;
+    bottom: 100px;
+}
+
+#s4 .s4Contents a {
+    display: inline-block;
+    width: 510px;
+    height: 770px;
+    overflow: hidden;
+    position: relative;
+}
+
+#s4 .s4Contents img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    transition: 1s;
+}
+
+#s4 .s4Contents a:hover img {
+    width: 110%;
+    height: 110%;
+}
+
+/* section5 */
+#s5 .s5Contents {
+    position: relative;
+    width: 1903px;
+    height: 1116px; /* 920 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 60px 120px 0 0;
+    background: url(../assets/bottomBG.png) no-repeat;
+}
+
+#s5 .s5Contents form {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+#s5 .s5Contents form>div>div>input {
+    width: 270px;
+}
+
+#s5 .s5Contents form textarea {
+    width: 270px;
+}
+
+#s5 .s5Contents form>div{
+    display: flex;
+}
+
+#s5 .s5Contents .inputBox1 span {
+    width: 80px;
+}
+
+#s5 .s5Contents .inputBox1 div {
+    width: 400px;
+    height: 70px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    line-height: 70px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10px 10px 0;
+}
+
+#s5 .s5Contents .inputBox2 span {
+    width: 80px;
+}
+
+#s5 .s5Contents .inputBox2 {
+    display: flex;
+    justify-content: baseline;
+    width: 400px;
+    height: 230px;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-top: 24px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+#s5 .s5Contents #send {
+    width: 400px;
+    height: 70px;
+    border-radius: 6px;
+    background: #fff;
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+}
+
+#s5 .s5Contents #send:hover {
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

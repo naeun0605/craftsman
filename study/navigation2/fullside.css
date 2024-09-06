@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.logo {
+    width: 200px;
+    height: 120px;     
+}
+nav {
+    width: 200px;
+    height: calc(100vh - 200px);
+}
+/* fullside 내비게이션 */
+.main {
+    width: 200px;
+   
+}
+.main>li {
+    position: relative;
+    width: 200px;
+}
+.main>li>a {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-weight: 500;
+    background-color: #ccc;
+    text-align: center;
+}
+.sub>li>a {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    color: #777;
+    font-weight: 500;  
+    font-size: 14px;
+    text-align: center;
+}
+.main>li:hover >a {
+    color: #fff;
+    background-color: #333;
+    font-weight: 600;
+}
+.sub>li:hover >a {
+    color:#333;
+    background-color: tomato;
+    font-weight: 600;
+}
+.sub {
+    position: absolute;
+    display: flex;
+    left: 200px;
+    margin-top: -30px;
+    visibility: hidden;
+    height: 0;
+    transition: 0.3s;
+}
+.main:hover .sub {
+    width: calc(100vw - 200px);
+    background-color: #eee;
+    visibility: visible;
+    height: 30px;
+}

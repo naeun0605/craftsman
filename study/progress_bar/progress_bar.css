@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+#bar {
+    background: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10px;
+   
+}
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.8;
+}
+h2 {
+    margin: 2rem 0 1rem;
+}

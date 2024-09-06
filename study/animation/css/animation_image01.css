@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.wrap {
+    width: 800px;
+    margin: 0 auto;
+    border: solid red;
+}
+.wrap h2 {
+    cursor: pointer;
+    text-align: center;
+}
+#imageWrap {
+    width: 100%;   
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#imageWrap img {
+    margin: 8px 16px;
+    opacity: 0;
+    filter: blur(20px);
+}
