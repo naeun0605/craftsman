@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설빙</title>
+    <style>
+        /* reset */
+        body{
+            margin: 0;
+        }
+        img{
+            width: 100%;
+            height:auto;
+            vertical-align: top;
+        }
+
+        /* phone */
+        .desktop, .tablet{
+            display: none;
+        }
+
+        /* tablet */
+        @media (min-width:768px){
+            .phone{
+                display: none;
+            }
+
+            .tablet{
+                display: block;
+            }
+        }
+
+        /* desktop */
+        @media (min-width:992px){
+            .tablet{
+                display: none;
+            }
+
+            .desktop{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="desktop" src="./../../03.assets/sub/brand/brand_desktop.png" alt="desktop">
+    <img class="tablet" src="./../../03.assets/sub/brand/brand_tablet.png" alt="tablet">
+    <img class="phone" src="./../../03.assets/sub/brand/brand_mobile.png" alt="phone">
+
+     <!-- desktop -->
+     <map name="image-map-desktop">
+
+        <!-- shape="rect" coords(좌표)="x1,y1,x2,y2"(왼쪽상단, 오른쪽하단 좌표) -->
+        <area alt="로고" title="메인페이지로 이동됩니다." href="draft.html" coords="316,91,169,1" shape="rect">
+        <area alt="브랜드" title="브랜드페이지로 이동됩니다." href="" coords="330,22,389,68" shape="rect">
+        <area alt="로그인" title="로그인페이지로 이동됩니다." href="#" coords="1686,21,1731,66" shape="rect">
+        <area alt="메뉴" title="메뉴페이지로 이동됩니다." href="#" coords="400,24,443,67" shape="rect">
+        <area alt="이벤트" title="이벤트페이지로 이동됩니다." href="#" coords="451,27,507,62" shape="rect">
+        <area alt="매장찾기" title="매장찾기 페이지로 이동됩니다." href="#" coords="517,24,581,65" shape="rect">
+        <area alt="고객지원" title="고객지원 페이지로 이동됩니다." href="#" coords="599,26,653,61" shape="rect">
+    </map>
+
+    <!-- tablet -->
+    <map name="image-map-tablet">
+        <area target="" alt="로고" title="로고" href="#" coords="1,1,59,40" shape="rect">
+    </map>
+
+    <!-- phone -->
+    <map name="image-map-phone">
+        <area target="" alt="로고" title="로고" href="#" coords="4,-1,68,39" shape="rect">
+    </map>   
+</html>

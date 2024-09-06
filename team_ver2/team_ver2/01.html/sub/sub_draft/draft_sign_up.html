@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설빙</title>
+    <style>
+        /* reset */
+        body{
+            margin: 0;
+        }
+        img{
+            width: 100%;
+            height:auto;
+            vertical-align: top;
+        }
+
+        /* phone */
+
+        /* 속성선택자
+
+            [속성="값"] => 값이 일치
+            [속성*="값"] => 값을 포함
+        */
+        [alt*='PC']{
+            display: none;
+        }
+
+        /* tablet */
+        @media (min-width:768px){
+
+            [alt="phone"]{
+                display: none;
+            }
+
+            [alt="tablet PC"]{
+                display: block;
+            }
+        }
+
+        /* desktop */
+        @media (min-width:992px){
+
+            [alt="tablet PC"]{
+                display: none;
+            }
+
+            [alt="desktop PC"]{
+                display: block;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <img src="./../../03.assets/sub/sign_up/signup_desktop.png" alt="desktop PC">
+    <img src="./../../03.assets/sub/sign_up/signup_tablet.png" alt="tablet PC">
+    <img src="./../../03.assets/sub/sign_up/signup_mobile.png" alt="phone">
+</body>
+</html>

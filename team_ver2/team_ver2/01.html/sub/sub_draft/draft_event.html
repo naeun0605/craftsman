@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설빙</title>
+    <style>
+        /* reset */
+        body{
+            margin: 0;
+        }
+        img{
+            width: 100%;
+            height:auto;
+            vertical-align: top;
+        }
+
+        /* phone */
+        .desktop, .tablet{
+            display: none;
+        }
+
+        /* tablet */
+        @media (min-width:768px){
+            .phone{
+                display: none;
+            }
+
+            .tablet{
+                display: block;
+            }
+        }
+
+        /* desktop */
+        @media (min-width:992px){
+            .tablet{
+                display: none;
+            }
+
+            .desktop{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="desktop" src="./../../03.assets/sub/event/event_desktop.png" alt="desktop">
+    <img class="tablet" src="./../../03.assets/sub/event/event_tablet.png" alt="tablet">
+    <img class="phone" src="./../../03.assets/sub/event/event_mobile.png" alt="phone">
+
+</html>
