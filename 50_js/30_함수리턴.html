@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            함수의 형식
+                1. 함수 선언
+                    function 함수명(parameter, 매개변수, ...){
+                        실행코드;
+                    }
+                2. 함수 호출
+                    함수명(argument, 인수, ...);
+        */
+
+        // 더하기
+        function add(parameter1, parameter2){
+            // return은 리턴값을 호출한 함수에게 되돌려 준다.
+            return parameter1 + parameter2;
+            // 또는 return은 함수의 종료를 의미한다. 그래서 document.write는 출력되지 않는다.
+            document.write("나도 출력해줄래?");
+        }
+
+        // 함수 호출
+        const na = add(2, 5);
+        const yo = add(20, 50);
+
+        // 출력
+        document.write("2+5=", na);
+        document.write("<br>");
+        document.write("20+50=", yo);
+    </script>
+</head>
+<body>
+    <h1>함수 - return</h1>
+</body>
+</html>

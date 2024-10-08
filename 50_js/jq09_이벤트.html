@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: solid;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이벤트</h1>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <p>여기에 표시됩니다.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        const box1 = $('.box1');
+        const box2 = $('.box2');
+
+        box1.mouseenter(function () {
+            box1.css({ background: "red" });
+        });
+
+        box1.mouseleave(reset);
+
+        box2.on("click", function () {
+            box1.css({ background: "green" });
+        });
+
+        box2.on("mouseleave", reset);
+
+        function reset() {
+            box1.css({ background: "transparent" });
+        }
+    </script>
+</body>
+
+</html>
